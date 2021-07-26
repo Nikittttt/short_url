@@ -9,7 +9,5 @@ services:
     command: sh -c "./code/scripts/run.sh"
     ports:
       - "5000:5000"
-    expose:
-      - "5000"
     restart: on-failure
 
