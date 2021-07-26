@@ -1,0 +1,15 @@
+version: "3.4"
+   
+services:
+  app:
+    build: 
+      context: app/
+    volumes:
+      - ./app/:/code/
+    command: sh -c "./code/scripts/run.sh"
+    ports:
+      - "5000:5000"
+    expose:
+      - "5000"
+    restart: on-failure
+
