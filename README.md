@@ -4,3 +4,4 @@
 
 # Пример работы
 ![Image](https://github.com/Nikittttt/short_url/raw/stage_3/Image/пример_работы.png)
+![Image](https://github.com/Nikittttt/short_url/raw/stage_3/Image/пример_работы2.png)
