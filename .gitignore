@@ -1,6 +1,6 @@
 .idea/**
 *.pyc
-__pycache__/
+app/__pycache__/
 .env/
 .git/
 *.db

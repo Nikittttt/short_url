@@ -1,16 +1,15 @@
-from flask import Flask, redirect, abort, render_template, request
+from flask import redirect, abort, render_template, request
 import shortuuid
 
-from db import DB
-
-app = Flask(__name__)
+from db import app, DB
         
         
 @app.route('/', methods=['post', 'get'])
 def index():
-    db = DB()
+    global DB
     message = ''
     if request.method == 'POST':
+        db = DB()
         url = request.form['url']
         short_url = request.form['short_url']
 
@@ -49,4 +48,4 @@ def short_url(short_url):
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0')
+    app.run(debug=True, host='0.0.0.0', port=5000)
