@@ -2,16 +2,13 @@ version: "3.4"
    
 services:
   db:
-    image: postgres:latest
-    restart: always
+    image: postgres
     ports:
       - "5432:5432"
     environment:
-      POSTGRES_USER: test
-      POSTGRES_PASSWORD: test
-      POSTGRES_DB: url_api
-    volumes:
-      - ./postgres-data:/var/lib/postgresql/data
+      - POSTGRES_DB=db
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=username
   app:
     build: 
       context: app/
@@ -19,7 +16,7 @@ services:
       - ./app/:/code/
     command: sh -c "./scripts/run.sh"
     ports:
-      - "5000:5000"
+      - "80:80"
     depends_on:
       - db
     restart: on-failure

@@ -1,6 +1,6 @@
-# Задание 3 части
-Нужно разобраться с Docker и docker-compose. Создать docker-compose файл, содержащий сервис app – приложение. 
-При запуске команды docker-compose up должно запускаться приложение, а веб-интерфейс должен быть доступен по адресу 127.0.0.1 или localhost.
+# Задание 4 части
+Нужно заменить базу sqlite на postgresql и добавить ее вторым сервисом в docker-compose файл. Также придется переписать запросы в базу данных, так как синтаксис в sqlite и postgresql немного отличаются.
 
 # Пример работы
-![Image](https://github.com/Nikittttt/short_url/raw/stage_3/Image/пример_работы.png)
+![Image](https://github.com/Nikittttt/short_url/raw/stage_4/Image/пример_работы.png)
+![Image](https://github.com/Nikittttt/short_url/raw/stage_4/Image/пример_работы2.png)
